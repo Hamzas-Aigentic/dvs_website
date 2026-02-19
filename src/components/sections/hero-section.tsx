@@ -69,7 +69,7 @@ export function HeroSection() {
         {/* Subtitle */}
         <p
           className={cn(
-            "mx-auto max-w-lg text-center text-base text-neutral-600 sm:text-lg md:text-xl leading-relaxed",
+            "mx-auto max-w-lg px-4 text-center text-base text-neutral-600 sm:text-lg md:text-xl leading-relaxed",
             "animate-in fade-in slide-in-from-bottom-4 fill-mode-backwards duration-700 delay-200"
           )}
         >
