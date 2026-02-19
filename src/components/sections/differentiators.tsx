@@ -16,14 +16,14 @@ export function Differentiators() {
         {DIFFERENTIATORS.map((item, index) => (
           <motion.div
             key={item.number}
-            className="group relative grid grid-cols-1 gap-4 rounded-2xl border border-neutral-200 bg-white p-8 transition-colors duration-300 hover:border-blue-200 md:grid-cols-[100px_1fr] md:gap-6"
+            className="group relative grid grid-cols-1 gap-4 rounded-2xl border border-neutral-200 bg-white p-5 transition-colors duration-300 hover:border-blue-200 md:grid-cols-[100px_1fr] md:gap-6 md:p-8"
             initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: index * 0.08 }}
           >
             {/* Number */}
-            <span className="text-5xl font-bold text-neutral-200 transition-colors group-hover:text-blue-200 md:text-6xl">
+            <span className="text-4xl font-bold text-neutral-200 transition-colors group-hover:text-blue-200 md:text-6xl">
               {item.number}
             </span>
             {/* Content */}

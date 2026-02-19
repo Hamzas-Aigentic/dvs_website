@@ -60,8 +60,7 @@ export function HeroSection() {
             "animate-in fade-in slide-in-from-bottom-4 fill-mode-backwards duration-700 delay-100"
           )}
         >
-          We Don&apos;t Just Advise on AI
-          <br />
+          We Don&apos;t Just Advise on AI{" "}
           <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
             We Build It.
           </span>
@@ -82,12 +81,12 @@ export function HeroSection() {
         {/* CTA Buttons */}
         <div
           className={cn(
-            "flex flex-row flex-wrap items-center justify-center gap-3 pt-2",
+            "flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row",
             "animate-in fade-in slide-in-from-bottom-4 fill-mode-backwards duration-700 delay-300"
           )}
         >
           <Button
-            className="rounded-full border-neutral-300"
+            className="w-full rounded-full border-neutral-300 sm:w-auto"
             size="lg"
             variant="outline"
           >
@@ -95,7 +94,7 @@ export function HeroSection() {
             Book a Discovery Call
           </Button>
           <Button
-            className="rounded-full bg-blue-500 hover:bg-blue-600 text-white"
+            className="w-full rounded-full bg-blue-500 hover:bg-blue-600 text-white sm:w-auto"
             size="lg"
           >
             See Our Services

@@ -11,7 +11,7 @@ export function CTASection() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="relative overflow-hidden bg-neutral-50 py-32"
+      className="relative overflow-hidden bg-neutral-50 py-16 md:py-32"
       id="contact"
     >
       {/* Background glow */}
@@ -24,9 +24,7 @@ export function CTASection() {
           Ready to Build?
         </span>
         <h2 className="text-4xl font-bold tracking-tight text-neutral-900 md:text-5xl lg:text-6xl">
-          Let&apos;s Turn Your AI Vision
-          <br />
-          Into a Production System
+          Let&apos;s Turn Your AI Vision Into a Production System
         </h2>
         <p className="mx-auto max-w-xl text-lg text-neutral-600 leading-relaxed md:text-xl">
           Every engagement starts with a free discovery call. We&apos;ll map your
@@ -36,7 +34,7 @@ export function CTASection() {
         <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
           <Button
             size="lg"
-            className="rounded-full bg-blue-500 px-8 text-lg text-white hover:bg-blue-600"
+            className="w-full rounded-full bg-blue-500 px-4 text-white hover:bg-blue-600 sm:w-auto sm:px-8 sm:text-lg"
           >
             <PhoneCall className="mr-2 size-5" />
             Book a Discovery Call
@@ -44,10 +42,10 @@ export function CTASection() {
           <Button
             size="lg"
             variant="outline"
-            className="rounded-full border-neutral-300 px-8 text-lg hover:border-blue-300"
+            className="w-full rounded-full border-neutral-300 px-4 text-sm hover:border-blue-300 sm:w-auto sm:px-8 sm:text-lg"
           >
             <Mail className="mr-2 size-5" />
-            hello@digitalvaultsolutions.com
+            <span className="break-words">hello@digitalvaultsolutions.com</span>
           </Button>
         </div>
         <p className="text-sm text-neutral-500">

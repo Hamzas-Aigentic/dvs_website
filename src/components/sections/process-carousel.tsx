@@ -95,7 +95,7 @@ function ProcessCard({
       }
     >
       <div className="relative w-full overflow-hidden rounded-3xl border border-neutral-200 bg-white transition-colors duration-300">
-        <div className="m-8 min-h-[400px] w-full md:m-10">
+        <div className="flex flex-col gap-4 p-6 md:min-h-[400px] md:p-10">
           <AnimatePresence mode="wait">
             <motion.div
               key={step}
@@ -159,7 +159,7 @@ function StepsNav({
   onChange: (index: number) => void;
 }) {
   return (
-    <nav aria-label="Process steps" className="flex justify-center px-4">
+    <nav aria-label="Process steps" className="flex justify-center">
       <ol className="flex w-full flex-wrap items-center justify-center gap-2" role="list">
         {PROCESS_STEPS.map((step, stepIdx) => {
           const isCompleted = current > stepIdx;
@@ -220,15 +220,15 @@ function StepIllustration({ step }: { step: number }) {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
         transition={{ type: "spring", stiffness: 300, damping: 25, mass: 0.5 }}
-        className="absolute right-4 top-4 md:right-8 md:top-auto md:bottom-8"
+        className="self-center md:absolute md:right-8 md:bottom-8"
       >
         <div
           className={cn(
-            "flex h-48 w-48 items-center justify-center rounded-2xl bg-gradient-to-br md:h-64 md:w-64",
+            "flex h-32 w-32 items-center justify-center rounded-2xl bg-gradient-to-br md:h-64 md:w-64",
             STEP_COLORS[step]
           )}
         >
-          <Icon className={cn("size-16 md:size-20", STEP_ICON_COLORS[step])} strokeWidth={1.2} />
+          <Icon className={cn("size-10 md:size-20", STEP_ICON_COLORS[step])} strokeWidth={1.2} />
         </div>
       </motion.div>
     </AnimatePresence>
@@ -245,10 +245,7 @@ export function ProcessCarousel() {
         title="From Discovery to Deployment"
         description="Every engagement follows a proven five-phase process. No shortcuts, no handoffs, no gaps."
       />
-      <div className="mx-auto flex w-full max-w-4xl flex-col gap-12 p-4">
-        <ProcessCard step={step}>
-          <StepIllustration step={step} />
-        </ProcessCard>
+      <div className="mx-auto flex w-full max-w-4xl flex-col gap-6 p-4 md:gap-10">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -256,6 +253,9 @@ export function ProcessCarousel() {
         >
           <StepsNav current={step} onChange={setStep} />
         </motion.div>
+        <ProcessCard step={step}>
+          <StepIllustration step={step} />
+        </ProcessCard>
       </div>
     </section>
   );
