@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { DVSLogo } from "@/components/ui/dvs-logo";
 import { NAV_LINKS } from "@/lib/constants";
-import { PhoneCall, Menu, X } from "lucide-react";
+import { Mail, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
@@ -51,10 +51,12 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button className="rounded-full bg-blue-500 hover:bg-blue-600 text-white" size="sm">
-              <PhoneCall className="mr-2 size-3.5" />
-              Book a Discovery Call
-            </Button>
+            <a href="mailto:hamza@digitalvaultsolutionsllc.com">
+              <Button className="rounded-full bg-blue-500 hover:bg-blue-600 text-white" size="sm">
+                <Mail className="mr-2 size-3.5" />
+                Get in Touch
+              </Button>
+            </a>
           </div>
 
           {/* Mobile hamburger */}
@@ -89,10 +91,12 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <Button className="rounded-full bg-blue-500 hover:bg-blue-600 text-white mt-4" size="lg">
-                <PhoneCall className="mr-2 size-4" />
-                Book a Discovery Call
-              </Button>
+              <a href="mailto:hamza@digitalvaultsolutionsllc.com">
+                <Button className="rounded-full bg-blue-500 hover:bg-blue-600 text-white mt-4" size="lg">
+                  <Mail className="mr-2 size-4" />
+                  Get in Touch
+                </Button>
+              </a>
             </nav>
           </motion.div>
         )}

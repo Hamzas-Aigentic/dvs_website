@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Zap, ArrowRight, PhoneCall } from "lucide-react";
+import { Zap, ArrowRight, Mail } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -85,14 +85,16 @@ export function HeroSection() {
             "animate-in fade-in slide-in-from-bottom-4 fill-mode-backwards duration-700 delay-300"
           )}
         >
-          <Button
-            className="w-full rounded-full border-neutral-300 sm:w-auto"
-            size="lg"
-            variant="outline"
-          >
-            <PhoneCall className="mr-2 size-4" />
-            Book a Discovery Call
-          </Button>
+          <a href="mailto:hamza@digitalvaultsolutionsllc.com" className="w-full sm:w-auto">
+            <Button
+              className="w-full rounded-full border-neutral-300 sm:w-auto"
+              size="lg"
+              variant="outline"
+            >
+              <Mail className="mr-2 size-4" />
+              Get in Touch
+            </Button>
+          </a>
           <Button
             className="w-full rounded-full bg-blue-500 hover:bg-blue-600 text-white sm:w-auto"
             size="lg"

@@ -46,10 +46,10 @@ export function Footer() {
               Get in Touch
             </h4>
             <a
-              href="mailto:hello@digitalvaultsolutions.com"
+              href="mailto:hamza@digitalvaultsolutionsllc.com"
               className="block text-sm text-neutral-500 transition-colors hover:text-blue-500"
             >
-              hello@digitalvaultsolutions.com
+              hamza@digitalvaultsolutionsllc.com
             </a>
           </div>
         </div>

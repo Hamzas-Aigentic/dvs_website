@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { PhoneCall, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function CTASection() {
@@ -27,26 +27,19 @@ export function CTASection() {
           Let&apos;s Turn Your AI Vision Into a Production System
         </h2>
         <p className="mx-auto max-w-xl text-lg text-neutral-600 leading-relaxed md:text-xl">
-          Every engagement starts with a free discovery call. We&apos;ll map your
-          processes, identify automation opportunities, and tell you honestly if
-          AI is the right solution.
+          Reach out and we&apos;ll map your processes, identify automation
+          opportunities, and tell you honestly if AI is the right solution.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
-          <Button
-            size="lg"
-            className="w-full rounded-full bg-blue-500 px-4 text-white hover:bg-blue-600 sm:w-auto sm:px-8 sm:text-lg"
-          >
-            <PhoneCall className="mr-2 size-5" />
-            Book a Discovery Call
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="w-full rounded-full border-neutral-300 px-4 text-sm hover:border-blue-300 sm:w-auto sm:px-8 sm:text-lg"
-          >
-            <Mail className="mr-2 size-5" />
-            <span className="break-words">hello@digitalvaultsolutions.com</span>
-          </Button>
+          <a href="mailto:hamza@digitalvaultsolutionsllc.com">
+            <Button
+              size="lg"
+              className="w-full rounded-full bg-blue-500 px-4 text-white hover:bg-blue-600 sm:w-auto sm:px-8 sm:text-lg"
+            >
+              <Mail className="mr-2 size-5" />
+              hamza@digitalvaultsolutionsllc.com
+            </Button>
+          </a>
         </div>
         <p className="text-sm text-neutral-500">
           No sales pitch. No commitment. Just a technical conversation about
